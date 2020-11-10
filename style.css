@@ -1,0 +1,1151 @@
+@charset UTF-8;
+/* ================================================ */
+/*               全体設定                */
+/* ================================================ */
+
+body{
+	font-size: 16px;
+	font-family:"游ゴシック",YuGothic,"serif","Montserrat","ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","sans-serif","Hot Salsa";
+	color: #1F2C32;
+	margin: 0;
+	background-color: #ffffff;
+}
+
+li {
+  list-style: none;
+  font-family: serif;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.8;
+	color: #87c864;
+	border-bottom: 2px solid #87c864
+}
+
+h2 {
+	font-size: 20px;
+	font-family: serif;
+}
+
+p {
+	font-family: serif;
+}
+
+.under{
+  border-bottom: double 5px #87c864;
+}
+
+
+*{
+ box-sizing: border-box;
+}
+
+/*
+
+
+*/
+/* ================================================ */
+/*ヘッダー：など場所をこまめに書く！*/
+/* ================================================ */
+
+
+#header {
+	background-color: #dee9e3;
+	color: #000;
+  	width: 100%;
+  	height: auto;
+	position: fixed;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	top: 0;
+	z-index: 10;
+}
+
+
+.header-top{
+	width: 1000px;
+  /* ↓check-point 70pxだとロゴの上下がちょっと切れちゃうので、80pxにしました */
+	height: auto;
+}
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 auto;
+  /* ↓check-point flexアイテムを上下中央に揃える */
+  align-items: center;
+}
+
+/* 
+ヘッダー1段目左
+*/
+
+.header-left {
+	display: flex;
+  /* ↓check-point flexアイテムを上下中央に揃える */	
+	align-items: center;
+　/* ↓check-point 改行されちゃうので横幅指定は削除 */
+  /* width:50%; */
+}
+
+.header_text{
+/* ↓check-point ロゴとの間に少し余白を作ってデザイン通りに */
+	padding-left: 20px;
+	font-size: 13px;
+}
+
+.header-left .logo_img {
+/* ↓check-point ロゴの大きさを指定（デザインカンプで指定しているロゴの横幅と同じにすると良いかも） */
+	width: 430px;
+}
+
+.header-left .logo_img img {
+/* ↓check-point 親要素のdivで大きさを指定したので、width100% で親要素と同じ大きさにする*/
+	width: 100%;
+	height: auto;
+	text-align: left;
+	left: 2px;
+	padding-top: 10px;
+}
+
+
+/* For English */
+.header-right {
+  width: 125px;
+  text-align: right; 
+/* ↓check-point 中央揃えを削除すると、右側にぴったりくっつく */
+  /* margin: 0 auto;  */
+/*  margin-top: 10px;	*/
+}
+
+/* 	 ヘッダー2段目  */
+
+nav {
+	clear: both;
+}
+
+nav .header-list {
+	display: flex;
+ 	justify-content: center;  /* 中央に寄せる */
+}
+
+.header-list li{
+	 display: block;
+	 text-align: center;
+	 float: left;
+	 font-weight: bold;
+ 	 padding: 0px 20px;
+ 	 font-size: 14px;
+ 	 line-height: 22px;
+ 	 margin-bottom: 10px;
+}
+.header-list .RESERVATION {
+	background: white;
+	opacity: 0.8;
+}
+
+/* ================================================ */
+/*main-viewのスライダー */
+/* ================================================ */
+
+.mv {
+	margin: 155px auto 70px auto;
+	width: 1000px;
+	height: auto;
+}
+
+.mv img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* ================================================ */
+/*　コンセプト
+/* ================================================ */
+
+
+.concept {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.concept_text {
+	background-image: url(images/Concept_back.png);
+	width: 1000px;
+	height: 250px;
+	margin-top: 20px;
+
+}
+.concept_text p {
+    line-height: 32px;
+    display: center;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 80px 50px 80px;
+}
+
+.concept_text h3 {
+	padding-top: 45px;
+	margin: 20px auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+/* ================================================ */
+/*スタイル*/
+/* ================================================ */
+
+
+.style {
+  height: 1750px;
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.number {
+	font-weight: bold;
+}
+
+.section-title {
+  text-align: center;
+/*  display: center;*/
+}
+
+.style-item p {
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+.style-item {
+  margin: 50px auto 150px auto;
+  width: 1000px;
+}
+
+/* ================================================ */
+/*Menu*/
+/* ================================================ */
+
+.menu {
+/* ↓check-point .menuの中にmenu1を入れたので、高さ50pxだと小さいので、指定を解除 */	
+	/* height: 50px; */
+/* ↓check-point 画面幅が1000pxより小さくなった時にflex-wrapで改行されるようにするために、width指定を解除し、最大width指定へ変更した */		
+	max-width: 1000px;
+    margin: 0 auto;
+    padding: 5px 10px;
+}
+
+.menu1 {
+    display: flex;
+/* ↓check-point flexアイテムを改行する */
+	flex-wrap:wrap;
+    justify-content: center;
+	margin: 0 auto;
+/* ↓check-point  .menuで指定してあるので、ここは削除*/
+	/* width: 1000px; */
+/* ↓check-point 改行したらheightは変わるので、指定は解除しておく */
+    /* height: 450px; */
+/*    background-color: orange;*/
+    padding: 5px 10px;
+}
+
+
+.menu1 .item {
+    flex: none;
+    width: 300px;
+    margin: 5px;
+    text-align: center;
+}
+
+.menu1 img {
+    width: 300px;
+}
+
+
+/* menu hover ここから*/
+.item{
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.item img{
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.item:hover img{
+  opacity: 0.6;
+  transition-duration: 0.3s;
+}
+
+.section-title{
+	margin: 0 auto ;
+	margin-bottom: 50px;
+}
+/* menu hover ここまで*/
+
+.heart_img {
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+/* ================================================ */
+/*　Product
+/* ================================================ */
+
+.products {
+	width: 1000px;
+/*	height: 900px;*/
+	height: auto;
+	margin: 0 auto;
+/*	margin-bottom: 50px;*/
+}
+
+.products_img{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.products_text {
+	background-image: url(images/Concept_back.png);
+	width: 1000px;
+	height: auto;
+	margin-top: 20px;
+
+}
+.products_text h3 {
+	padding-top: 45px;
+	margin: 40px auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+.products_text p {
+    line-height: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0 100px 50px 100px;
+}
+
+.rose_img{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+
+
+/* ================================================ */
+/*　news
+/* ================================================ */
+.news {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.news_text {
+	width: 1000px;
+	height: 200px;
+	margin-top: 20px;
+
+}
+
+table {
+	width: 90%;
+	margin: 16px auto;
+	position: relative;
+    z-index: 1;
+}
+
+td {
+	line-height: 35px;
+    padding-top: 5px;
+}
+
+td.date {
+	font-size: 12px;
+}
+
+td.text {
+	border-bottom: 1px dotted gray;
+}
+
+/* ================================================ */
+/*　Access
+/* ================================================ */
+.ACCESS {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom:20px;
+}
+
+
+.google-maps {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+.google-maps iframe/*,
+.google-maps object,
+.google-maps embed*/ {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+}
+
+
+.access_text {
+/*	background-image: url(images/Concept_back.png);*/
+	margin-top: 50px;
+
+}
+.access_text h3 {
+/*	padding-top: 20px;*/
+	margin: 20px auto 10px auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+.access_text p {
+    line-height: 25px;
+    display: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+/* ================================================ */
+/*　フッター
+/* ================================================ */
+
+footer {
+	width: 100%;
+	height: auto;
+	background-color: #919995;
+/*	background-color: #569573;*/
+	padding: 40px 0 20px 0;
+	text-align: center;
+	color: #fff;
+
+}
+/*
+.footer_text {
+	background-image: url(images/Concept_back.png);
+	width: 1000px;
+	height: 250px;
+	margin-top: 20px;
+
+}*/
+
+.footer_text p {
+    line-height: 35px;
+    display: center;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+footer span {
+	font-size: 10px;
+}
+
+
+
+/* ボタン全体 */
+.sns_img{
+	height: 50px;
+	width: 395px;
+	text-align: center;
+	margin: 0 auto;
+}
+.flowbtn11{
+font-family:'Verdana',sans-serif;	
+border-radius:4px;
+position:relative;
+display:inline-block;
+width:130px;
+font-size:16px;
+color:#fff!important;
+text-decoration:none;
+margin-bottom:5px;
+padding: 5px 0;
+}
+/* Twitter */
+.fl_tw1{
+background:#55acee;
+}
+/* Instagramアイコン位置 */
+.insta_btn11 .fa-instagram{
+position:relative;
+z-index:1;	
+}
+/* Instagram紫グラデ背景色 */
+.insta_btn11{
+background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+overflow:hidden;
+}
+/* Instagramオレンジグラデ背景色 */
+.insta_btn11:before{
+content: '';
+position:absolute;
+top:17px;
+left:-75px;
+width:100%;
+height:100%;
+background:-webkit-radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 45%, rgba(255, 88, 96, 0) 80%);
+background:radial-gradient(#ffdb2c 5%, rgba(255, 105, 34, 0.65) 55%, rgba(255, 88, 96, 0) 80%);
+}
+
+/* アイコンボタンホバー時 */
+.flowbtn11:hover span{
+-webkit-transform: rotateX(360deg);
+-ms-transform: rotateX(360deg);
+transform: rotateX(360deg);
+text-decoration:none;
+}
+/* ボタン内テキスト調整 */
+.flowbtn11 span{
+font-size:14px;	
+position:relative;
+left:8px;
+bottom:2px;
+transition:.6s;	
+display:inline-block;	
+}
+/* ulタグの内側余白を０にする */
+ul.snsbtniti2{
+padding:0!important;
+}
+/* アイコンボタンの位置調整 */
+.snsbtniti2{
+display:flex;
+flex-flow:row wrap;
+
+}
+/* アイコンボタン同士の余白調整 */
+.snsbtniti2 li{
+flex:0 0 48%;
+text-align:center!important;
+}
+
+
+
+/*--------------------------------------
+　topへぬるっと飛ばすボタン
+---------------------------------------*/
+
+.to_top {
+	position: fixed;
+	right: 10px;
+	bottom: 50px;
+	width: 100px;
+}
+
+.to_top img {
+	width: 100%;
+}
+#top a:hover {
+	text-decoration: none;
+}
+
+
+/*================================================
+以下レスポンシブ対応
+==================================================*/
+/*================================================
+PC : 画面の横幅が1001px以上
+==================================================*/
+
+@media screen and (min-width: 1001px) {
+
+.drawer {
+	display: none;
+}
+
+}
+
+/*================================================
+画面の横幅が1000pxまで
+==================================================*/
+
+@media screen and (max-width: 1000px) {
+/*================================================
+Tablet : 画面の横幅が768pxまで
+==================================================*/
+/*@media screen and (max-width: 768px){*/
+/* コンセプトの改行*/
+.br_pc { display:none; }
+
+
+/*　ハンバーガーメニュー*/
+/* checkboxは非表示 */
+.drawer_checkbox {
+  display: none;
+}
+
+/* ドロワーアイコン部分 */
+.drawer_icon {
+  display: block;
+  position: fixed;
+  right:0px;  
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 10;
+  top: 1%;
+}
+.drawer_icon-item, .drawer_icon-item:before, .drawer_icon-item:after {
+  background-color: #000;
+  display: block;
+  width: 26px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+.drawer_icon-item:before {
+  content: '';
+  top: 16px;
+}
+.drawer_icon-item:after {
+  content: '';
+  top: -16px;
+}
+
+/* 背景を暗く */
+.drawer_overlay {
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* チェックがついた時に表示されるようにする */
+.drawer_checkbox:checked ~ .drawer_overlay {
+  opacity: 0.3;
+  pointer-events: auto;
+}
+
+
+/* ドロワー内のメニュー */
+.drawer_menu {
+  background: #fff;
+  color: #000;
+  max-width: 100%;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -320px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+/* チェックがついた時に表示されるようにする */
+.drawer_checkbox:checked ~ .drawer_menu {
+  right: 0;
+}
+
+
+
+/* バーガーの真ん中の線 */
+.drawer_checkbox:checked ~ .drawer_icon .drawer_icon-item {
+  background: transparent;
+}
+/* バーガーの上と下の線を動かす */
+.drawer_checkbox:checked ~ .drawer_icon .drawer_icon-item:before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 0;
+}
+.drawer_checkbox:checked ~ .drawer_icon .drawer_icon-item:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.drawer_icon-item, .drawer_icon-item:after, .drawer_icon-item:before, .drawer_overlay, .drawer_menu {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+/*　ハンバーガーメニューここまで*/
+
+.header-top{
+	width: 100%;
+	height: auto;
+}
+
+/* ヘッダー1段目左 ロゴとサブタイトル*/
+
+.header_text {
+	display: none;
+}
+
+.header-right{
+ 	display: none;
+}
+
+/* heade navを消す*/
+.inner_right {
+	display: none;
+}
+
+/*.header-left .logo_img {
+	width: 340px;
+}
+*/
+/*.header-left .logo_img img {*//*
+*//* ↓check-point 親要素のdivで大きさを指定したので、width100% で親要素と同じ大きさにする*/
+/*	width: 80%;*/
+/*	height: auto;
+	text-align: left;
+	left: 2px;
+}*/
+
+
+/* 	 ヘッダー2段目  */
+
+nav {
+	clear: both;
+}
+
+nav .header-list {
+/*	display: flex;
+ 	justify-content: center; */ /* 中央に寄せる */
+ 	flex-direction: column !important;
+}
+
+.inner_right_li li{
+ 	 padding: 15px 20px;
+ 	 font-size: 14px;
+ 	 line-height: 25px;
+}
+
+
+.mv {
+	width: 80%;
+	height: auto;
+	margin: 100px auto;
+}
+
+
+.mv img{
+	/*幅80%の中央寄せに*/
+	width: 80%;
+	height: auto;
+}
+
+
+/* ================================================ */
+/*　　Tablet / コンセプト
+/* ================================================ */
+
+.concept {
+	width: 100%;
+	height: auto;
+}
+
+
+.concept_text {
+	background-image: url(images/Concept_back.png);
+	width: 90%;
+	height: auto;
+	margin-top: 20px;
+	margin: 0 auto;
+
+}
+.section-title{
+/*	width: 768px;*/
+	text-align: center;
+	margin-bottom: 30px;
+} 
+
+.under{
+	font-size: 28px;
+}
+.concept_text h3 {
+	text-align: center;
+}
+
+.concept_text p {
+    line-height: 32px;
+	text-align: center;
+/*	padding-bottom: 30px;*/
+	padding: 0 25px 30px 25px;
+}
+
+/* ================================================ */
+/*　Tablet スタイル*/
+/* ================================================ */
+
+
+.style {
+  height: auto;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.style img{
+/*	width: 60%;
+	height: auto;*/
+	width: 130%;
+	height: auto;
+	margin-left:-60px;
+}
+
+.style-item p {
+	font-size: 18px;
+	margin-bottom: 50px;
+}
+/* contents-itemのfloatプロパティをleftにしてください */
+.style-item {
+/*  margin: 50px auto 100px auto;*/
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+.menu1 img {
+    width: 250px;
+    height: auto;
+}
+
+
+/* ================================================ */
+/*　Tablet Product
+/* ================================================ */
+
+.products {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+.products_img{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.products img{
+	width: 60%;
+	height: auto;
+}
+
+.products_text {
+/*	background-image: url(images/Concept_back.png);*/
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	margin-top: 40px;
+
+
+}
+.products_text h3 {
+	text-align: center;
+}
+
+
+.products_text p {
+    line-height: 32px;
+	text-align: center;
+	padding: 0 25px 30px 25px;
+}
+
+
+
+
+.rose_img{
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+/* ================================================ */
+/*　Tablet News*/
+/* ================================================ */
+
+.news {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.news_text {
+	width: 100%;
+	height: 200px;
+	margin-top: 20px;
+
+}
+
+table {
+	width: 90%;
+	margin: 16px auto;
+	position: relative;
+    z-index: 1;
+}
+
+/* ================================================ */
+/*　Tablet Access*/
+/* ================================================ */
+
+.ACCESS {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom:40px;
+}
+
+
+.access_text {
+	width: 100%;
+	height: auto;
+}
+
+/*　↓大事*/
+}
+/*　↑Tablet用終了*/
+
+/*================================================
+Smartphone :  画面の横幅が640pxまで
+=================================================*/
+@media screen and (max-width:640px){
+
+
+.drawer_icon {
+  top: -1%;
+}
+
+.header-top{
+	width: 300px;
+	height: auto;
+}
+
+.header-left{
+	width: 60%;
+}
+
+/*ハンバーガーメニュー内リスト*/
+.inner_right_li li{
+ 	 padding: 10px 20px;
+ 	 line-height: 20px;
+}
+
+.mv {
+	width: 75%;
+	height: auto;
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+
+/* ================================================ */
+/*　　Smartphone/ コンセプト
+/* ================================================ */
+
+.under{
+	font-size: 20px;
+}
+.concept {
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.concept_text h3 {
+    padding-top: 20px;
+/*    text-align: left;*/
+    padding: 5px;
+    line-height: 25px;
+    font-size: 15px;
+
+}
+
+.concept_text {
+	width: 100%;
+	height: auto;
+}
+
+.concept_text p {
+	 width: 90%;
+	 height: auto;
+	 margin: 0 auto;
+	 font-size: 15px;
+	 text-align: left;
+}
+
+/* ================================================ */
+/*　Smartphone スタイル*/
+/* ================================================ */
+
+.style {
+  height: auto;
+  width: 100%;
+/*  width: 320px;*/
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.style img{
+	width: 130%;
+	height: auto;
+	margin-left:-30px;
+}
+
+.style-item p {
+	font-size: 16px;
+	margin-bottom: 30px;
+}
+/* contents-itemのfloatプロパティをleftにしてください */
+.style-item {
+  margin: 50px auto 50px auto;
+}
+
+/* ================================================ */
+/*　Smartphone Menu*/
+/* ================================================ */
+
+.menu1 img {
+    width: 150px;
+    height: auto;
+}
+
+.menu1 p{
+	font-size: 15px;
+}
+.heart_img img{
+	width: 100px;
+}
+
+
+/* ================================================ */
+/*　Smartphone Product
+/* ================================================ */
+.products img{
+	width: 70%;
+}
+
+.products_text {
+	width: 90%;
+	height: auto;
+	padding-bottom: 10px;
+	margin-top: 40px;
+}
+.products_text h3 {
+    padding-top: 20px;
+    text-align: left;
+    margin: 20px 0;
+	font-size: 15px;
+
+}
+
+
+.products_text p {
+	 width: 90%;
+	 height: auto;
+	 margin: 0 auto;
+	 font-size: 15px;
+	 text-align: left;
+}
+
+.rose_img img{
+	width: 110px;
+}
+
+/* ================================================ */
+/*　Smartphone News
+/* ================================================ */
+
+.news_text {
+	width: 100%;
+	height: auto;
+	margin-top: 20px;
+
+}
+/*
+table {
+	width: 80%;
+	margin: 16px auto;
+	position: relative;
+    z-index: 1;
+}*/
+td.text {
+	font-size: 14px;
+	padding-left: 10px;
+	line-height: 25px;
+}
+
+/* ================================================ */
+/*　Smartphone Access*/
+/* ================================================ */
+.google-maps{
+	width: 100%;
+	margin: 0 auto;
+}
+.access_text {
+	width: 300px;
+	font-size: 14px;
+	margin: 0 auto;
+}
+
+.access_text p {
+    line-height: 20px;
+    margin-bottom: 30px;
+
+}
+
+.to_top img{
+	display: none;
+}
+
+.footer_text {
+	width: 100%;
+	font-size: 14px;
+	margin: 0 auto;
+}
+
+.footer_text p {
+    line-height: 20px;
+}
+
+.sns_img{
+	width: 320px;
+}
+/*　↓大事*/
+}
+/*　↑Smartphone用終了*/
+
+
+
+
