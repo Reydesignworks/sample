@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- 文字コード！-->
+<meta charset="utf-8">
+
+<!-- viewpoint設定（レスポンシブル） -->
+<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+
+<!-- ブラウザで表示されるタイトル !-->
+<title>Hair Salon ｜ Moana</title>
+
+	<!-- アイコンフォント用 -->
+	<link href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+
+	<link rel="stylesheet" href="slick/slick.css" media="all">
+	<link rel="stylesheet" href="slick/slick-theme.css" />
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+<!-- SEO対策に必要な記述。サーバーアップしたら必ず記述しましょう。
+<meta name="description" content="" />
+<meta name="keywords" content="" /> -->
+<meta name="description" content="自然にやさしいナチュラルな美容室" />
+<meta name="keywords" content="美容院,オーガニック,ヘアサロン,"/>
+
+	<!-- スタイルシート -->
+	<link rel="stylesheet" href="reset.min.css" media="all">
+	<link rel="stylesheet" href="style.css" media="all">
+	<link rel="stylesheet" href="slick/slick.css" media="all">
+
+	<!-- スライダー -->
+	<link rel="stylesheet" href="slick/slick-theme.css" />
+
+	<!-- jQuery/slick  -->
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>	
+	<script src="slick/slick.min.js"></script>
+
+	<!-- スムーススクロールのプラグイン -->
+	<script src="smooth-scroll.min.js"></script>
+	<script type="text/javascript">
+
+		//ヘッダー分の高さを考慮した&スクロールの速度800ms のスクロールを実装
+
+		var scroll = new SmoothScroll('a[href*="#"]',{
+			offset: 50,
+			header: '#header',
+			speed: 800
+		});
+
+		$(function() {
+			$('.mv').slick({
+			  infinite: true,
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  dots: false,
+			  autoplay: true,
+			  // autoplaySpeed: 3000
+			  speed:1000,
+			  fade: true,
+			  cssEase: 'linear'
+
+			});
+
+
+			var topBtn = $('.to_top');
+		    topBtn.hide();
+    		//スクロールしてページトップから700に達したらボタンを表示
+    		$(window).scroll(function () {
+        		if ($(this).scrollTop() > 600) {
+		            topBtn.fadeIn();
+        		} else {
+            		topBtn.fadeOut();
+        		}
+    		});
+		});
+	</script>
+	<!-- menu クリック後自動で閉じる -->
+	<script>
+		$(function() {
+		  $('.drawer_menu li a').on('click', function(event) {
+		    $('.drawer_checkbox').prop('checked', false);
+		  });
+		});
+	</script>
+
+
+	<!-- ScrollReveal（ふわっとスクロール）を読み込む -->
+	<script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+<!-- コンテンツ部分のコードを記入していく -->
+<!-- header  --------------------------------------------->
+
+<header id="header">
+    <!-- ヘッダー１段目 -->
+    <div class="header-top">
+
+      <!-- ヘッダー1段目左 -->
+    <div class="header-left ">
+	        <div class="logo_img">
+	          <img src="images/logo.png" alt="logo">
+	        </div>
+             <p class="header_text">~ ニュージーランドで日本の技術、サービスを ~</p>
+    </div>
+	 <!-- ヘッダー1段目右 -->
+			<div class="header-right">
+				<a href="#English">
+					<img src="images/For English.png" alt="English" width="100%" height="auto" >
+				</a>
+			</div>
+			<div class="drawer">
+				<input class="drawer_checkbox" id="drawerCheckbox" type="checkbox">
+
+				<!-- ドロワーアイコン部分 -->
+				<label class="drawer_icon" for="drawerCheckbox">
+					<span class="drawer_icon-item"></span>
+				</label>
+
+				<!-- 背景を暗く -->
+				<label class="drawer_overlay" for="drawerCheckbox"></label>
+
+				<!-- ドロワーメニュー -->
+	    			<nav class="drawer_menu">
+					<ul class="inner_right_li">
+						<li class="Home"><a href="#header">HOME<br>ホーム</a></li>
+						<li class="CONCEPT"><a href="#concept">CONCEPT<br>コンセプト</a></li>
+						<li class="STYLE"><a href="#style">STYLE<br>人気スタイル</a></li>
+						<li class="MENU"><a href="#menu">MENU<br>メニュー</a></li>
+						<li class="PRODUCTS"><a href="#products">PRODUCTS<br>商品</a></li>
+						<li class="access"><a href="#news">NEWS<br>ニュース</a></li>
+						<li class="access"><a href="#access">ACCESS<br>アクセス</a></li>
+						<li class="RESERVATION"><a href="#reservation">RESERVATION<br>予約</a></li>
+						<li class="English"><a href="#English">English<br>英語ページ</a></li>
+
+					</ul>
+					</nav>
+				</div>
+     </div>
+		
+			<!-- ヘッダー2段目 -->
+		<nav class="inner_right">
+			<ul class="header-list">
+				<li class="Home"><a href="#header">HOME<br>ホーム</a></li>
+				<li class="CONCEPT"><a href="#concept">CONCEPT<br>コンセプト</a></li>
+				<li class="STYLE"><a href="#style">STYLE<br>人気スタイル</a></li>
+				<li class="MENU"><a href="#menu">MENU<br>メニュー</a></li>
+				<li class="PRODUCTS"><a href="#products">PRODUCTS<br>商品</a></li>
+				<li class="access"><a href="#news">NEWS<br>ニュース</a></li>
+				<li class="access"><a href="#access">ACCESS<br>アクセス</a></li>
+				<li class="RESERVATION"><a href="#reservation">RESERVATION<br>予約</a></li>
+			</ul>
+		</nav>
+
+</header> 
+
+<!-- header -->
+
+
+	<!--↓ここからmain-viewのスライダー -->
+		<div class="mv" id="top">
+			<img src="images/Header_1.jpg" alt="ヘッダー画像">
+			<img src="images/Header_2.jpg" alt="ヘッダー画像">
+			<img src="images/Header_3.jpg" alt="ヘッダー画像">
+			<img src="images/Header_4.jpg" alt="ヘッダー画像">
+			<img src="images/Header_5.jpg" alt="ヘッダー画像">
+			<img src="images/Header_6.jpg" alt="ヘッダー画像">
+		</div>
+
+
+
+
+<!-- Concept ここから↓ -->
+
+    <div class="concept " id="concept">
+    			<h2 class="section-title"><span class="under">Concept／コンセプト</span></h2>
+			<div class="concept_text">
+
+				<h3>ニュージーランドの先住民族マオリの言葉で「海」を意味する「Moana」
+				</h3>
+				    <p>
+						当店は美しい海・地球・人に優しくをモットーにした日系オーガニックヘアサロンです。
+						<br/>経験豊富なヘアスタイリストがお客様の髪質にあったカットの仕方や薬剤の使用を選び、<br class="br_pc">また、日本人スタッフが常駐ため、英語が心配な方でも安心してご利用いただけます。
+						<br>まるで日本にいるかのようなサービスと技術、最旬ヘアスタイルを提供をいたします。
+					</p>
+
+			</div>
+	</div> 
+
+	<!-- Style ここから ----------------------------------------->
+
+	<div class="style" id="style">
+		<h2 class="section-title"><span class="under">Style／人気スタイル</span></h2>
+		<div class="style-item anime">
+			<p><span class="number">No.1 </span> カット＆オーガニックカラー</p>
+			<img src="images/Style1.png">
+		</div>
+
+		<div class="style-item anime">
+			<p><span class="number">No.2 </span> カット＆バレイヤージュカラー</p>
+			<img src="images/Style2.png">
+		</div>
+
+		<div class="style-item anime">
+			<p><span class="number">No.3 </span> オーガニックトリートメント</p>
+			<img src="images/Style3.png">
+		</div>	
+
+	</div>
+<!-- Menu  ここから----------------------------------------->
+		
+	    <div class="menu" id="menu">
+	        <h2 class="section-title"><span class="under">Menu／メニュー</span></h2>
+
+
+			<div class="menu1">
+				  <div class="item"><img src="images/menu1.png"><p>Cut/カット</p></div>
+				  <div class="item"><img src="images/menu2.png"><p>Color/カラー</p></div>
+				  <div class="item"><img src="images/menu3.png"><p>Straight Perm/縮毛矯正</p></div>
+				  <div class="item"><img src="images/menu4.png"><p>Standard Perm/パーマ</p></div>
+				  <div class="item"><img src="images/menu5.png"><p>Treatment/トリートメント</p></div>
+				  <div class="item"><img src="images/menu6.png"><p>Others/ヘアセット等</p></div>
+
+			</div>
+
+		</div>
+
+			<div class="heart_img anime"><img src="images/heart.png" alt="heart"></div>
+
+
+
+<!--　Product　ここから------------------------------------------>
+
+    <div class="products" id="products">
+    			<h2 class="section-title"><span class="under">Products／取り扱い商品について</span></h2>
+    			<p class="products_img"><img src="images/products.jpg" alt="product"></p>
+			<div class="products_text">
+				<h3>ニュージーランドの気候に合わせた薬剤等を使用</h3>
+				    <p>
+							当店では髪にも頭皮にも、そして環境にも優しいオーガニックシャンプー&トリートメントを使用。<br class="br_pc">
+							取り扱い薬剤は全てスタッフが厳選したものを日本から直輸入しております。<br>その結果、髪や頭皮がニュージーランドでも最高の状態を保つサポートへとつながっております。<br class="br_pc">
+							ご自宅用に販売している商品もございますので、お気軽にご相談ください。
+					</p>
+
+			</div>
+    </div> 
+    			<div class="rose_img anime"><img src="images/rose.png" alt="rose"></div>
+
+			
+	
+<!--　News 　ここから------------------------------------------>
+
+    <div class="news" id="news">
+    			<h2 class="section-title"><span class="under">NEWS／ニュース</span></h2>
+			<div class="news_text">
+				<table>
+					<tr>
+						<td class="date">2020.7.1</td>
+						<td class="text">7月臨時休業のお知らせ</td>
+					</tr>
+					<tr>
+						<td class="date">2020.7.15</td>
+						<td class="text">コロナウィルス対策について</td>
+					</tr>
+					<tr>
+						<td class="date">2020.08.01</td>
+						<td class="text">8月キャンペーン情報のお知らせ</td>
+					</tr>
+					<tr>
+						<td class="date">2020.08.15</td>
+						<td class="text">ツイッター&インスタグラムを始めました！</td>
+					</tr>
+				</table>
+
+			</div>
+	</div> 
+
+<!--　ACCESS 　ここから------------------------------------------>
+
+    <div class="ACCESS" id="access">
+    			<h2 class="section-title"><span class="under">Access／アクセス</span></h2>
+    			<div class="google-maps">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1596.4291789969598!2d174.76424079748062!3d-36.845868165079665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47b7de88c997%3A0xad9ecdf74814f226!2sAnemone%20Hair%20Salon!5e0!3m2!1sja!2snz!4v1598680659121!5m2!1sja!2snz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">			
+				</iframe>
+				</div>
+			<div class="access_text">
+				<h3> Address／住所 </h3>
+				    <p>
+					xx Queen Street, Auckland CBD, Auckland 1010
+					</p>
+				<h3> Tel／電話 </h3>
+				    <p>
+					(09)123-xxxx 
+					</p>
+				<h3> Opening hours／営業時間 </h3>
+				    <p>
+						    Mon-Fri: 10:00-18:00
+						<br>Sat-Sun: 9:00-17:00
+					</p>
+				    <p>
+				    <br>
+					※ご予約はお電話、WEB予約にて受付にて承っております。
+                    <br>お電話の場合は日本語対応いたしております。お気軽にお問合せください。
+					</p>
+			</div>
+
+
+	</div> 
+
+
+
+<!-- フッター ----------------------------------------------->
+	<footer>
+			<div class="footer_text">
+				    <p>
+							Twitter・Instagramでは最新情報を発信しております。
+							<br>＼Please Follow Us／
+					</p>
+			</div>
+
+ <!-- SNSボタン -->
+ 		<div class="sns_img">
+		<ul class="snsbtniti2">
+			<li><a  href="https://twitter.com/ray030710251" class="flowbtn11 fl_tw1"
+			><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+
+			<li><a href="https://www.instagram.com/rey_chihiro/?igshid=47ohfs6nnln4" class="flowbtn11 insta_btn11"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+		</ul>
+		</div>
+
+
+		<span>© COPYRIGHT SHE, Inc. 2020 ALL RIGHTS RESERVED</span>
+	</footer> 
+
+
+<!-- topへ飛ばすボタン --------------------------------------->
+	<div class="to_top">
+		<a href="#top"><img src="images/to_top.png" alt="トップへ"></a>
+	</div>
+
+<!-- ふわっと　----------------------------------------->
+	<!--・要素が見えるたびにアニメーション表示させる
+		・モバイル時は適用しない
+		・アニメーションは下から表示
+		・アニメーションの長さは800ms
+		・アニメーションの遅延は500ms
+		・アニメーションを始めた時の不透明度0 -->
+    <script>
+		ScrollReveal().reveal('.anime', {
+			reset: true,
+			mobile: false,
+			origin: 'bottom',
+			duration: 1000,
+			delay: 600,
+			opacity: 0,
+
+		});
+    </script>
+
+
+</body>
+</html>
